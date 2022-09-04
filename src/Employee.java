@@ -60,12 +60,9 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return "Имя " + name +
-                ", Фамилия " + family +
-                ", Отчество " + fatherName +
-                ", Отдел " + department +
+
+    public String info() {
+        return "Имя " + name + ", Фамилия " + family +", Отчество " + fatherName +", Отдел " + department +
                 ", зп " + salary + " рублей.";
     }
 }
