@@ -29,31 +29,24 @@ public class EmployeeBook {
     }
 
     public void deletePersonalsFio(String name, String family, String fatherName) {
-        for (int i = 0; i < addPersonal.length - 1; i++) {
+        for (int i = 0; i < addPersonal.length; i++) {
             if (addPersonal[i] != null && addPersonal[i].getName().equals(name) && addPersonal[i].getFamily().equals(family) && addPersonal[i].getFatherName().equals(fatherName)) {
                 for (; i < addPersonal.length - 1; i++) {
                     addPersonal[i] = addPersonal[i + 1];
-                }
+                } addPersonal[addPersonal.length - 1] = null;
             }
-
-        }
-        if (addPersonal[addPersonal.length - 1] != null && addPersonal[addPersonal.length - 1].getName().equals(name) &&
-                addPersonal[addPersonal.length - 1].getFamily().equals(family) && addPersonal[addPersonal.length - 1].getFatherName().equals(fatherName)) {
-            addPersonal[addPersonal.length - 1] = null;
         }
     }
 
     public void deletePersonalsId(int id) {
-        for (int i = 0; i < addPersonal.length - 1; i++) {
-            if (addPersonal[i] != null && addPersonal[i].getId() == id) {
-                for (; i < addPersonal.length - 1; i++) {
-                    addPersonal[i] = addPersonal[i + 1];
+
+            for (int i = 0; i < addPersonal.length; i++) {
+                if (addPersonal[i] != null && addPersonal[i].getId() == id) {
+                    for (; i < addPersonal.length - 1; i++) {
+                        addPersonal[i] = addPersonal[i + 1];
+                    } addPersonal[addPersonal.length - 1] = null;
                 }
             }
-        }
-        if (id > 0 & id <= addPersonal.length) {
-            addPersonal[addPersonal.length - 1] = null;
-        }
     }
 
     public void printAllPersonals() {

@@ -23,18 +23,19 @@ public class Main {
         personals.setAddPersonal(ivan8);
         personals.setAddPersonal(ivan9);
 
+//        personals.printAllPersonals();
+//        personals.deletePersonalsFio("Ivan3", "Ivanov", "Ivanovich");
+//        personals.deletePersonalsId(3);
+//        personals.printAllPersonals();
+//        System.out.println(personals.sumPersonalSalaryFromDepartment(1));
+//        personals.changePersonalsSalaryWithFioPersonal("Ivan7", "Ivanov", "Ivanovich", 111);
+//        personals.infoForPersonalWithoutDepartment(5);
+//        personals.changePersonalsDepartmentWithFioPersonal("Ivan7", "Ivanov", "Ivanovich", 1);
+//        personals.infoForPersonalWithoutDepartment(1);
+//        personals.deletePersonalsFio("Ivan9", "Ivanov", "Ivanovich");
+        personals.deletePersonalsId(10);
         personals.printAllPersonals();
-        personals.deletePersonalsFio("Ivan3","Ivanov","Ivanovich");
-        personals.deletePersonalsId(3);
-        personals.printAllPersonals();
-        System.out.println(personals.sumPersonalSalaryFromDepartment(1));
-        personals.changePersonalsSalaryWithFioPersonal("Ivan7","Ivanov","Ivanovich",111);
-        personals.infoForPersonalWithoutDepartment(5);
-        personals.changePersonalsDepartmentWithFioPersonal("Ivan7","Ivanov","Ivanovich",1);
-        personals.infoForPersonalWithoutDepartment(1);
-        personals.deletePersonalsFio("Ivan9", "Ivanov", "Ivanovich");
-
-        personals.personalWithSalaryLess(3);
+//        personals.personalWithSalaryLess(3);
 
     }
 
