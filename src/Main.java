@@ -12,16 +12,16 @@ public class Main {
         Employee ivan9 = new Employee("Ivan9", "Ivanov", "Ivanovich", 4, 10);
 
         EmployeeBook personals = new EmployeeBook();
-        personals.setPersonals(ivan);
-        personals.setPersonals(ivan1);
-        personals.setPersonals(ivan2);
-        personals.setPersonals(ivan3);
-        personals.setPersonals(ivan4);
-        personals.setPersonals(ivan5);
-        personals.setPersonals(ivan6);
-        personals.setPersonals(ivan7);
-        personals.setPersonals(ivan8);
-        personals.setPersonals(ivan9);
+        personals.setAddPersonal(ivan);
+        personals.setAddPersonal(ivan1);
+        personals.setAddPersonal(ivan2);
+        personals.setAddPersonal(ivan3);
+        personals.setAddPersonal(ivan4);
+        personals.setAddPersonal(ivan5);
+        personals.setAddPersonal(ivan6);
+        personals.setAddPersonal(ivan7);
+        personals.setAddPersonal(ivan8);
+        personals.setAddPersonal(ivan9);
 
         personals.printAllPersonals();
         personals.deletePersonalsFio("Ivan3","Ivanov","Ivanovich");
@@ -32,6 +32,9 @@ public class Main {
         personals.infoForPersonalWithoutDepartment(5);
         personals.changePersonalsDepartmentWithFioPersonal("Ivan7","Ivanov","Ivanovich",1);
         personals.infoForPersonalWithoutDepartment(1);
+        personals.deletePersonalsFio("Ivan9", "Ivanov", "Ivanovich");
+
+        personals.personalWithSalaryLess(3);
 
     }
 

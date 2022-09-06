@@ -1,7 +1,7 @@
 public class Employee {
-    String name;
-    String family;
-    String fatherName;
+    private String name;
+    private String family;
+    private String fatherName;
     int department;
     double salary;
     private final int id;
@@ -40,19 +40,7 @@ public class Employee {
         return this.id;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setFamily(String family) {
-        this.family = family;
-    }
-
-    public void setFatherName(String fatherName) {
-        this.fatherName = fatherName;
-    }
-
-    public void setDepartment(int department) {
+        public void setDepartment(int department) {
         this.department = department;
     }
 
@@ -62,7 +50,7 @@ public class Employee {
 
 
     public String info() {
-        return "Имя " + name + ", Фамилия " + family +", Отчество " + fatherName +", Отдел " + department +
+        return "Имя " + name + ", Фамилия " + family + ", Отчество " + fatherName + ", Отдел " + department +
                 ", зп " + salary + " рублей.";
     }
 }
