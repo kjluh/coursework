@@ -1,9 +1,9 @@
 public class Employee {
-    String name;
-    String family;
-    String fatherName;
-    int department;
-    double salary;
+    private String name;
+    private String family;
+    private String fatherName;
+    private int department;
+    private double salary;
     private final int id;
     private static int counter;
 
@@ -40,19 +40,7 @@ public class Employee {
         return this.id;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setFamily(String family) {
-        this.family = family;
-    }
-
-    public void setFatherName(String fatherName) {
-        this.fatherName = fatherName;
-    }
-
-    public void setDepartment(int department) {
+        public void setDepartment(int department) {
         this.department = department;
     }
 
@@ -60,12 +48,9 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return "Имя " + name +
-                ", Фамилия " + family +
-                ", Отчество " + fatherName +
-                ", Отдел " + department +
+
+    public String info() {
+        return "Имя " + name + ", Фамилия " + family + ", Отчество " + fatherName + ", Отдел " + department +
                 ", зп " + salary + " рублей.";
     }
 }
