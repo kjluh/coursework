@@ -61,26 +61,26 @@ public class EmployeeBook {
 
     public void personalWithSalaryMore(double exampleSalary) {
         for (int i = 0; i < addPersonal.length; i++) {
-            if (addPersonal[i] != null && addPersonal[i].salary >= exampleSalary) {
+            if (addPersonal[i] != null && addPersonal[i].getSalary() >= exampleSalary) {
                 System.out.println("id сотрудника = " + addPersonal[i].getId() + " " + addPersonal[i].getName() + " " + addPersonal[i].getFamily() + " " +
-                        addPersonal[i].getFatherName() + " с зарплатой " + addPersonal[i].salary + " руб");
+                        addPersonal[i].getFatherName() + " с зарплатой " + addPersonal[i].getSalary() + " руб");
             }
         }
     }
 
     public void personalWithSalaryLess(double exampleSalary) {
         for (int i = 0; i < addPersonal.length; i++) {
-            if (addPersonal[i] != null && addPersonal[i].salary < exampleSalary) {
+            if (addPersonal[i] != null && addPersonal[i].getSalary() < exampleSalary) {
                 System.out.println("id сотрудника = " + addPersonal[i].getId() + " " + addPersonal[i].getName() + " " + addPersonal[i].getFamily() + " " +
-                        addPersonal[i].getFatherName() + " с зарплатой " + addPersonal[i].salary + " руб");
+                        addPersonal[i].getFatherName() + " с зарплатой " + addPersonal[i].getSalary() + " руб");
             }
         }
     }
 
     public void infoForPersonalWithoutDepartment(int depart) {
         for (int i = 0; i < addPersonal.length; i++) {
-            if (addPersonal[i] != null && addPersonal[i].department == depart) {
-                System.out.println(addPersonal[i].getName() + " " + addPersonal[i].getFamily() + " " + addPersonal[i].getFatherName() + " с зарплатой " + addPersonal[i].salary + " руб");
+            if (addPersonal[i] != null && addPersonal[i].getDepartment() == depart) {
+                System.out.println(addPersonal[i].getName() + " " + addPersonal[i].getFamily() + " " + addPersonal[i].getFatherName() + " с зарплатой " + addPersonal[i].getSalary() + " руб");
             }
         }
     }
@@ -89,8 +89,8 @@ public class EmployeeBook {
         int counterPersonals = 0;
         double sumSalary = 0;
         for (int i = 0; i < addPersonal.length; i++) {
-            if (addPersonal[i] != null && addPersonal[i].department == depart) {
-                sumSalary = addPersonal[i].salary + sumSalary;
+            if (addPersonal[i] != null && addPersonal[i].getDepartment() == depart) {
+                sumSalary = addPersonal[i].getSalary() + sumSalary;
                 counterPersonals++;
             }
         }
@@ -100,8 +100,8 @@ public class EmployeeBook {
     public void personIndexSalaryFromDepartment(int department, double indexForSalaryApp) {
         double sum = 0;
         for (int i = 0; i < addPersonal.length; i++) {
-            if (addPersonal[i] != null && addPersonal[i].department == department) {
-                addPersonal[i].setSalary(addPersonal[i].salary * indexForSalaryApp + addPersonal[i].salary);
+            if (addPersonal[i] != null && addPersonal[i].getDepartment() == department) {
+                addPersonal[i].setSalary(addPersonal[i].getSalary() * indexForSalaryApp + addPersonal[i].getSalary());
             }
         }
     }
@@ -109,8 +109,8 @@ public class EmployeeBook {
     public double sumPersonalSalaryFromDepartment(int department) {
         double sum = 0;
         for (int i = 0; i < addPersonal.length; i++) {
-            if (addPersonal[i] != null && addPersonal[i].department == department) {
-                sum = sum + addPersonal[i].salary;
+            if (addPersonal[i] != null && addPersonal[i].getDepartment() == department) {
+                sum = sum + addPersonal[i].getSalary();
             }
         }
         return sum;
@@ -119,9 +119,9 @@ public class EmployeeBook {
     public double personWithMaxSalaryFromDepartment(int department) {
         double maxSalary = 0;
         for (int i = 0; i < addPersonal.length; i++) {
-            if (addPersonal[i] != null && addPersonal[i].department == department) {
-                if (maxSalary < addPersonal[i].salary) {
-                    maxSalary = addPersonal[i].salary;
+            if (addPersonal[i] != null && addPersonal[i].getDepartment() == department) {
+                if (maxSalary < addPersonal[i].getSalary()) {
+                    maxSalary = addPersonal[i].getSalary();
                 }
             }
         }
@@ -131,9 +131,9 @@ public class EmployeeBook {
     public double personWithMinSalaryFromDepartment(int department) {
         double minSalary = maxValue();
         for (int i = 0; i < addPersonal.length; i++) {
-            if (addPersonal[i] != null && addPersonal[i].department == department) {
-                if (minSalary > addPersonal[i].salary) {
-                    minSalary = addPersonal[i].salary;
+            if (addPersonal[i] != null && addPersonal[i].getDepartment() == department) {
+                if (minSalary > addPersonal[i].getSalary()) {
+                    minSalary = addPersonal[i].getSalary();
                 }
             }
         }
@@ -142,7 +142,7 @@ public class EmployeeBook {
 
     public void indexing(double indexForSalaryApp) {
         for (int i = 0; i < addPersonal.length; i++) {
-            addPersonal[i].setSalary(addPersonal[i].salary * indexForSalaryApp + addPersonal[i].salary);
+            addPersonal[i].setSalary(addPersonal[i].getSalary() * indexForSalaryApp + addPersonal[i].getSalary());
         }
     }
 
@@ -160,11 +160,11 @@ public class EmployeeBook {
     }
 
     public double minValue() {
-        double minSalary = addPersonal[0].salary;
+        double minSalary = addPersonal[0].getSalary();
         for (int i = 0; i < addPersonal.length; i++) {
             if (addPersonal[i] != null) {
-                if (minSalary > addPersonal[i].salary) {
-                    minSalary = addPersonal[i].salary;
+                if (minSalary > addPersonal[i].getSalary()) {
+                    minSalary = addPersonal[i].getSalary();
                 }
             } else {
                 break;
@@ -177,8 +177,8 @@ public class EmployeeBook {
         double maxSalary = 0;
         for (int i = 0; i < addPersonal.length; i++) {
             if (addPersonal[i] != null) {
-                if (maxSalary < addPersonal[i].salary) {
-                    maxSalary = addPersonal[i].salary;
+                if (maxSalary < addPersonal[i].getSalary()) {
+                    maxSalary = addPersonal[i].getSalary();
                 }
             } else {
                 break;
@@ -191,7 +191,7 @@ public class EmployeeBook {
         double sumSalary = 0;
         for (int i = 0; i < addPersonal.length; i++) {
             if (addPersonal[i] != null) {
-                sumSalary = sumSalary + addPersonal[i].salary;
+                sumSalary = sumSalary + addPersonal[i].getSalary();
             } else {
                 break;
             }

@@ -2,8 +2,8 @@ public class Employee {
     private String name;
     private String family;
     private String fatherName;
-    int department;
-    double salary;
+    private int department;
+    private double salary;
     private final int id;
     private static int counter;
 
